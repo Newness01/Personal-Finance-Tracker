@@ -5,8 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      external: ['prop-types']
-  }
-}
+    chunkSizeWarningLimit: 1000, // optional: suppress large chunk warnings
+  },
 })
